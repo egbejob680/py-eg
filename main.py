@@ -17,8 +17,19 @@ def Prompt():
     else:
         print("please enter correct value")
 
-def addMail(name,email):
+def addMail():
     "modify"
+    print("CREATE NEW MAIL")
+    name = input("enter name: ")
+    email = input("enter email: ")
+    
+    file = "list.txt"
+    file = open(file, 'a')
+    if(file.write(f'{name}:{email}\n')):
+        file.close()
+        print('Mail created')
+    else:
+        print("An Error Occured")
 def showMail():
     "modify"
 def updateMail():
@@ -29,3 +40,4 @@ def deleteMail():
 def quit():
     "modify"
 Prompt()
+addMail()
