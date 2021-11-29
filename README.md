@@ -1,0 +1,1 @@
+want to create a mailing list that stores names and emails in python
